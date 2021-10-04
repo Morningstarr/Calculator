@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "CalculatorClient";
+
+package calctor;
+
+service Calctor {
+  // Sends a greeting
+  rpc Summa (Arguments) returns (Result);
+
+  rpc Mult (Arguments) returns (Result);
+
+  rpc Difference (Arguments) returns (Result);
+
+  rpc Division (Arguments) returns (Result);
+}
+
+message Arguments {
+	double first = 1;
+	double second = 2;
+}
+
+message Result {
+	double res = 1;
+}
